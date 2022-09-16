@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel = "icon" href = "images/icon.png" type = "image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Criptografia </title>
+</head>
+
+<body>
+    <header>
+    <nav class="logos">
+    <ul>
+        <li> <img src="images/logo.png" alt="logo alura" class="alura"></li>
+        <li class="pose"> <a href="https://github.com/daniel-belisario"><img src="images/github.png" alt="Logo do GitHub" class="github"></a></li>
+    </ul>
+    </nav>
+    </header>
+    <main class="cor">
+
+        <h1 class="textoprincipal">Codificador</h1>
+        <p class="texto">Somente texto minusculo e sem acento</p>
+
+        <section class="classmain">
+            
+            <textarea class="input-texto" cols = "29" rows="13" placeholder=" Digite aqui a sua mansagem."></textarea> 
+            <div>  
+                <button class="codificar" onclick="botaoCodificar()"> Codificar </button>
+                <button class="decodificar" onclick="botaoDecodificar()">Decodificar</button>
+            </div>
+            <div>
+                <input type="button" value="Limpar" id="clear" onclick="javascript:limpar();"> 
+            </div>
+            
+        </section>
+
+    <section class="class2">
+                <textarea class = "mensagem" id = "output" cols = "29" rows ="13" placeholder=" O texto codificado ou decodificado aparecer aqui!"></textarea>
+            <div>
+                <button class="copiartexto" id="paracopiar">Copiar</button>
+            </div>
+        </section> 
+
+    <footer>
+        <p class="copyright">&copy; Feito por Daniel Belisario - Challenge Programa ONE e Alura 2022</p>
+    </footer>
+    </main>
+
+<script src="script.js"></script>
+<script>
+function limpar() {
+    document.getElementById("output").value = "";
+}
+
+    const minhacopia = document.getElementById("output");
+    const botaocopia = document.getElementById("paracopiar");
+    
+    botaocopia.onclick = function () {
+    
+    minhacopia.select();
+    
+    document.execCommand("Copy");
+    alert("texto foi copiado");
+    };
+</script>
+</body>
+
+
+criptografar descriptografar
